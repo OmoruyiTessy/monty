@@ -71,12 +71,11 @@ int parse_line(char *buffer, int line_number, int format)
 }
 
 /**
- * find_func - find the appropriate function for the opcode
+ * find_func - find the appropriate function
  * @opcode: opcode
  * @value: argument of opcode
  * @format:  storage format. If 0 Nodes will be entered as a stack.
- * @ln: line number
- * if 1 nodes will be entered as a queue.
+ * @ln: line number if 1 nodes will be entered as a queue.
  * Return: void
  */
 void find_func(char *opcode, char *value, int ln, int format)
