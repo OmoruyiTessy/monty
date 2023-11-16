@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
 	}
 
 	stack_t *head = open_file(argv[1]);
+
 	free_nodes(&head);
 	return (0);
 }
@@ -27,6 +28,7 @@ int main(int argc, char *argv[])
 stack_t *create_node(int n)
 {
 	stack_t *node = malloc(sizeof(stack_t));
+
 	if (node == NULL)
 		err(4);
 
@@ -62,7 +64,11 @@ void free_nodes(stack_t **head)
  * @new_node: Pointer to the new node.
  * @ln: line number of the opcode.
  */
-void add_to_queue(stack_t **head, stack_t **new_node, __attribute__((unused))unsigned int ln)
+void add_to_queue(
+		stack_t **head,
+		stack_t **new_node,
+		__attribute__((unused))unsigned int ln
+		)
 {
 	stack_t *tmp;
 
